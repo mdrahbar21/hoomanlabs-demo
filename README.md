@@ -1,7 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-
-<video controls src="background-three.js.mp4" title="Title"></video>
+![alt text](background-three.js.gif)
 
 ## Getting Started
 
