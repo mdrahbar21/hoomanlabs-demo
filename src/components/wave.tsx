@@ -4,9 +4,12 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import fragmentShader from '@/shaders/background-frag.glsl';
 import vertexShader from '@/shaders/background-vert.glsl';
-import particleImage from '@/assets/particle.png'; // Ensure this path is correct
 
-const Wave: React.FC = () => {
+interface WaveProps {
+  className?: string;
+}
+
+const Wave: React.FC<WaveProps> = ({ className }) => {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -15,7 +18,7 @@ const Wave: React.FC = () => {
     const wavespeed = 2;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 500);
+    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 500);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -88,7 +91,7 @@ const Wave: React.FC = () => {
     };
   }, []);
 
-  return <div ref={mountRef} />;
+  return <div ref={mountRef} className={className} />;
 };
 
 export default Wave;

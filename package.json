@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
     "auto-bind": "^5.0.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.13",
     "fs": "^0.0.1-security",
     "glsl-noise": "^0.0.0",
     "gsap": "^3.12.5",
@@ -22,6 +26,9 @@
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.77.6",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-border-gradient-radius": "^3.0.1",
     "three": "^0.166.0"
   },
   "devDependencies": {
