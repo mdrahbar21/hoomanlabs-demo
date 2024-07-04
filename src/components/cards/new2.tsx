@@ -46,7 +46,7 @@ const AgentCards2 = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col items-center gap-11 flex-1 bg-popover p-8 rounded-3xl shadow-lg md:-mt-52 2xl:-mt-96 border-2 border-back-second border-double">
+    <div className="flex flex-col items-center gap-11 flex-1 bg-popover p-8 rounded-3xl shadow-lg md:-mt-20 lg:-mt-20 xl:-mt-48  2xl:-mt-48 border-2 border-back-second border-double">
       <div className="flex flex-col justify-center pt-20 pl-28 pb-20 pr-28">
         <h3 className="text-center pb-8 -mt-12">Talk to your personalised hoomans</h3>
         <div className="flex flex-col md:w-[550px] gap-9 items-center shrink-0">
@@ -56,10 +56,10 @@ const AgentCards2 = () => {
                 key={agent.id}
                 layoutId={agent.id.toString()}
                 onClick={() => setSelectedId(agent.id)}
-                className="transition-transform duration-1000 ease-out"
+                className="transition-transform duration-500 ease-in-out"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.2 }}
               >
                 <Card
                   name={agent.name}

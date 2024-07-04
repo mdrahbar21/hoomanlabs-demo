@@ -37,7 +37,7 @@ const AgentCards = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-11 flex-1 bg-popover p-8 rounded-3xl shadow-lg md:-mt-52 xl:-mt-96  border-2 border-back-second border-double">
+    <div className="flex flex-col items-center gap-11 flex-1 bg-popover p-8 rounded-3xl shadow-lg md:-mt-32 lg:-mt-32 xl:-mt-48  2xl:-mt-48  border-2 border-back-second border-double">
       <div className="flex flex-col justify-center pt-20 pl-28 pb-20 pr-28">
         <h3 className="text-center pb-8 -mt-12">Talk to your personalised hoomans</h3>
         <div className="flex flex-col md:w-[550px] gap-9 items-center shrink-0">
