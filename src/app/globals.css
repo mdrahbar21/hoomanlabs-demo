@@ -9,6 +9,7 @@
     --foreground: 0 0% 100%;
     --text-primary: 0 0% 100%;
     --text-secondary: 0 0% 57%;
+    --text-tertiary: 0 0% 97%;
     --card: 0 0% 9%;
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 5%;
@@ -53,17 +54,47 @@ h1 {
 }
 
 h2 {
-  @apply font-Gilroy text-5xl md:text-6xl 2xl:text-7xl font-extrabold tracking-tight md:tracking-tighter pointer-events-none;
+  @apply font-Gilroy text-4xl md:text-5xl 2xl:text-6xl font-medium tracking-tight md:tracking-tighter pointer-events-none bg-gradient-to-b from-text-primary to-text-secondary bg-clip-text text-transparent;
 }
 
 h3 {
-  @apply font-Gilroy text-xl md:text-3xl font-semibold tracking-tight text-center hover:pointer-events-none;
+  @apply font-Gilroy text-xl md:text-3xl font-semibold text-text-tertiary text-center hover:pointer-events-none ;
 }
 
 h4 {
-  @apply font-Gilroy text-secondary-foreground text-base 2xl:text-xl text-center pointer-events-none;
+  @apply font-Gilroy text-text-secondary text-base 2xl:text-xl text-center pointer-events-none;
 }
 
 p {
-  @apply font-Gilroy text-primary-foreground text-lg pointer-events-none;
+  @apply font-Gilroy text-text-tertiary text-lg pointer-events-none;
+}
+
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-item {
+  opacity: 0;
+  will-change: transform;
+  filter: blur(5px);
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-item.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.logo-item svg {
+  --Logotype-width: 150px;
+  width: var(--Logotype-width);
+  height: auto;
+  fill: currentColor;
 }

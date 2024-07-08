@@ -9,7 +9,7 @@ interface WaveProps {
   className?: string;
 }
 
-const Wave: React.FC<WaveProps> = ({ className }) => {
+const Wave: React.FC<WaveProps> = async({ className }) => {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -91,7 +91,15 @@ const Wave: React.FC<WaveProps> = ({ className }) => {
     };
   }, []);
 
-  return <div ref={mountRef} className={className} />;
+  return(
+    <>
+      <div ref={mountRef} className={className} />
+      <div
+        className="absolute z-0 top-full w-full h-48 rounded-2xl bg-gradient-to-b from-background/20 to-popover/10 bg-opacity-50"
+        style={{ top: `${window.innerHeight}px` }}
+      ></div>
+    </>
+   );
 };
 
 export default Wave;

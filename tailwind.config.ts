@@ -36,6 +36,7 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         "text-primary": "#FFFFFF",
         "text-secondary": "#919191",
+        "text-tertiary": "#f7f7f7",
         "border-1":"#6D6B6C",
         "border-2":"#A4A3A1/57",
         "border-3":"#C1BFBD",
@@ -53,7 +54,7 @@ const config: Config = {
         },
         "back-second": {
           DEFAULT: "hsl(var(--back-second))",
-          foreground: "hsl(var(--backg-second))",
+          foreground: "hsl(var(--back-second))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
