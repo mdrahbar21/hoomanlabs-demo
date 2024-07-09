@@ -18,7 +18,7 @@ const GradientOutlineText: React.FC<{ text: string; className?: string }> = ({ t
 
 const AutomationStats: React.FC = () => {
   return (
-    <div className="text-white p-4 sm:p-6 md:p-12 font-Gilroy">
+    <div className="text-white p-4 sm:p-6 md:p-12 font-Gilroy h-screen">
       <div className="relative mb-8 sm:mb-16">
         <GradientOutlineText text="70%" className="z-0" />
         <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/3 text-center w-full">

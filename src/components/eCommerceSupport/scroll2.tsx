@@ -1,9 +1,12 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { LuArrowRight } from "react-icons/lu";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { usePathname} from "next/navigation";
 import { useRouter } from 'next/navigation'
 
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
 
 const Scroller2: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,8 +17,8 @@ const Scroller2: React.FC = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
   });
+  const y = useParallax(scrollYProgress, 300);
 
   const sections = [
     {
@@ -102,7 +105,7 @@ const Scroller2: React.FC = () => {
                 opacity: useTransform(
                   scrollYProgress,
                   [index / sections.length, (index +0.5) / sections.length, (index +1) / sections.length],
-                  index === sections.length -1 ? [0, 1, 1] : [0, 1, 0]
+                  index === sections.length -1 ? [1, 1, 1] : [0, 1, 0]
                 ),
                 pointerEvents: activeSection === index ? "auto" : "none",
               }}

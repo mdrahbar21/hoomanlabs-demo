@@ -91,7 +91,7 @@ const ChatInterface: React.FC = () => {
         </motion.div>
         <div
           ref={chatRef}
-          className=" col-span-1 relative rounded-[8px] flex flex-col min-w-[320px] sm:min-w-[400px] w-[36vw] max-h-[70vh] mx-auto text-white"
+          className=" col-span-1 h-fit  relative rounded-[8px] flex flex-col min-w-[320px] sm:min-w-[400px] w-[36vw] max-h-[90vh] mx-auto text-white"
         >
           <div
             className="absolute inset-0 z-0"

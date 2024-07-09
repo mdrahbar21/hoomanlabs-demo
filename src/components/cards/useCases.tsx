@@ -76,7 +76,17 @@ const CardGrid2: React.FC = () => {
   ];
 
   return (
-    <div className="flex md:h-[80vh] w-full items-center justify-center md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto">
+    <div>
+      {/* <div className='relative flex flex-col items-center'> */}
+      <div className="sm:mx-4 border border-[#F80759] mt-20 flex items-center justify-center rounded-full py-1 px-2 sm:px-3 mb-6 w-fit  bg-[#AA093F]/10">
+        <h3 className="text-center mx-4 z-10 font-Gilroy font-medium text-[12px] sm:text-[16px] text-[#F80759] w-wrap">
+          Use Cases
+        </h3> 
+      </div>
+      <h2 className="px-2 sm:px-3 mb-6 py-2">Designed for every E-Commerce</h2>
+      {/* </div> */}
+    <div className="flex md:h-[100vh] w-full items-center justify-center md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto">
+      
       <div className="w-full h-full grid grid-cols-1 md:grid-cols-6 md:grid-rows-14 gap-2 p-4">
         <Card
           {...cards[0]}
@@ -103,6 +113,7 @@ const CardGrid2: React.FC = () => {
           className="min-h-[60vw] sm:min-h-0 md:col-span-4 md:row-span-4"
         />
       </div>
+    </div>
     </div>
   );
 };

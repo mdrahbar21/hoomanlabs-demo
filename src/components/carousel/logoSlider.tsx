@@ -3,13 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const logos = [
-    { name: 'Shopify', image: '/shopify.png', link: '/', width: 200, height: 100 },
-    { name: 'Giva', image: '/giva.png', link: 'https://www.giva.co/', width: 150, height: 55 },
+    { name: 'Shopify', image: '/shopify.png', link: '/', width: 150, height: 100 },
+    { name: 'Giva', image: '/giva.png', link: 'https://www.giva.co/', width: 90, height: 50 },
     { 
       name: 'ElevenLabs', 
       image: 'https://storage.googleapis.com/eleven-public-cdn/images/elevenlabs-grants-logo.png',
       link: 'https://elevenlabs.io/text-to-speech',
-      width: 300, 
+      width: 250, 
       height: 150
     },
 ];

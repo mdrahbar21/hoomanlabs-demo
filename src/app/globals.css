@@ -45,6 +45,15 @@
   .font-Gilroy {
     font-family: var(--font-gilroy);
   }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 
@@ -69,6 +78,16 @@ p {
   @apply font-Gilroy text-text-tertiary text-lg pointer-events-none;
 }
 
+
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 90vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-padding-top: 50px;  
+  scroll-padding-bottom: 50px;
+}
 
 
 .logo-container {

@@ -7,7 +7,7 @@ interface ParentCardProps {
 
 const ParentCard: React.FC<ParentCardProps> = ({ children }) => {
   return (
-    <div className="bg z-0 p-8 rounded-3xl shadow-lg  ">
+    <div className="bg py-8 rounded-3xl">
       {children}
     </div>
   );
