@@ -63,7 +63,7 @@ const Analytics: React.FC = () => {
             <div className="flex items-center h-[24px] my-2">
               <img src="/list-star.svg" className="w-[24px] h-[24px]" />
               <h3 className="text-start mx-4 font-Gilroy font-normal text-[16px] leading-6 sm:text-[20px] text-muted-foreground">
-                xxxxxxxxxxxx
+                Analysis of calls
               </h3>
             </div>
           </div>

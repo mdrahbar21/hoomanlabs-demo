@@ -6,7 +6,7 @@ type VideoComponentProps = {
 
 const VideoComponent: React.FC<VideoComponentProps> = ({ videoUrl }) => {
   return (
-    <div className='h-full md:h-screen'>
+    <div className='h-full mt-10'>
     <div className="hidden md:flex">
     <iframe
       width="800"

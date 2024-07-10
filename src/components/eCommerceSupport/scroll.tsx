@@ -15,9 +15,8 @@ function Image({ section }: { section: any }) {
   const y = useParallax(scrollYProgress, 0);
   const pathname = usePathname();
   const router = useRouter();
-
   const handleButtonClick = useCallback(() => {
-    router.push('/dashboard');
+    router.push('#contact');
   }, [router]);
 
   return (
@@ -103,10 +102,10 @@ const Scroll: React.FC = () => {
           </h3>
         </div>
       </div>
-      <div className="hidden md:grid md:grid-cols-3 w-full max-w-[1440px] gap-10 mx-auto py-10">
-        <h2 className="md:text-start md:col-span-2 md:mb-36 md:px-0">
-          Revolutionary AI Voice Agents for <br />
-          Effortless E-Commerce Support
+      <div className="hidden md:grid md:grid-cols-3 w-full max-w-[1440px]  mx-auto py-10">
+        <h2 className="md:text-start md:col-span-3 px-auto">
+          Revolutionary AI Voice Agents <br/> for 
+          effortless E-Commerce support
         </h2>
       </div>
       <div className='grid-cols-1 w-full max-w-[1440px] gap-10 mx-auto py-4 md:hidden'>

@@ -70,7 +70,7 @@ const Carousel: React.FC = () => {
 };
 
 return (
-    <div className='h-full md:h-screen'>  
+    <div className='h-full'>  
       <div className='bg-popover relative flex flex-col items-center -mt-10'>
           <div className="sm:mx-4 border border-[#F80759] mt-20 flex items-center justify-center rounded-full py-1 px-2 sm:px-3 mb-6 w-fit  bg-[#AA093F]/10">
               <h3 className="text-center mx-4 z-10 font-Gilroy font-medium text-[12px] sm:text-[16px] text-[#F80759] w-wrap">

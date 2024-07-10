@@ -30,7 +30,7 @@ export default function Contact() {
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full h-screen max-w-[1440px] gap-10 mx-auto py-10 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full md:h-screen max-w-[1440px] gap-10 mx-auto py-10 mt-10">
                 <motion.div
                     initial={{ opacity: 0, y: 6 }}
                     animate={{
@@ -41,26 +41,26 @@ export default function Contact() {
                     className="col-span-1 flex flex-col min-w-[320px] sm:min-w-[400px] px-8 sm:px-12"
                 >
                     <div className="col-span-1 flex flex-col min-w-[320px] sm:min-w-[400px] px-8 sm:px-12">
-                        <h2 className="md:text-start text-center font-semibold text-[48px] md:text-[72px] tracking-tight">
+                        <h2 className="md:text-start text-center  font-semibold text-[42px] md:text-[72px] mb-8 md:mb-auto tracking-tight">
                             Get In Touch
                         </h2>
                         <h3 className='text-xl text-start px-2 mt-6'>
                             Phone
                         </h3>
                         <p className='text-base px-2 '>
-                            +91 8445979949
+                            +91 89608 06967
                         </p>
                         <h3 className='text-xl text-start px-2 mt-6'>
                             Email
                         </h3>
                         <p className='text-base px-2 '>
-                            tarun@hoomanlabs.com
+                            founders@hoomanlabs.com
                         </p>
                         <h3 className='text-xl text-start px-2 mt-6'>
                             Address
                         </h3>
                         <p className='text-base px-2 '>
-                            123, Main Street, BLR
+                            Bangalore, India
                         </p>
                     </div>
                 </motion.div>

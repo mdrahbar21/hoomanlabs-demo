@@ -28,7 +28,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-background via-popover to-background w-screen grid grid-cols-1 md:grid-cols-2 gap-10 py-[15vh] px-[8vw] md:px-[15vw]">
+    <div className="w-full max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 py-[15vh] px-4">
       <div className="flex flex-col justify-center w-full">
         <div className="sm:mx-4 border border-[#F80759] flex items-center justify-center rounded-full py-1 px-2 sm:px-3 mb-6 w-fit  bg-[#AA093F]/10">
           <h3 className="text-center mx-4 z-10 font-Gilroy font-medium text-[12px] sm:text-[16px] text-[#F80759] w-wrap">
@@ -41,8 +41,8 @@ const Faq = () => {
           Questions
         </h2>
       </div>
-      <div className="flex items-center justify-center w-full">
-        <div className="my-6 px-6 list-disc [&>li]:mt-2">
+      <div className="md:col-span-1 items-center justify-center">
+        <div className="my-6 list-disc [&>li]:mt-2">
           {faqEntries.map((faq) => (
             <div className="relative mb-3" key={faq.id}>
               <h6 className="mb-0">

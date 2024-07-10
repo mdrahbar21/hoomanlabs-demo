@@ -37,6 +37,8 @@ const Stars: FC<StarsProps> = (props) => {
 const StarsCanvas: FC = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
+        <div className="hidden">Rahbar</div>
+        <div className="hidden">Md Rahbar</div>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />

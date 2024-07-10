@@ -18,6 +18,7 @@ import AutomationStats from '@/components/eCommerceSupport/automationStats';
 import Analytics from '@/components/cards/analytics';
 import Scroll from '@/components/eCommerceSupport/scroll';
 import StarsCanvas from '@/components/star';
+import Footer from '@/components/footer/footer';
 
 const VideoComponent = dynamic(() => import('@/components/cards/videoComponent'), {
   suspense: true,
@@ -32,7 +33,7 @@ const HomePage: React.FC = () => {
         </div>
       </motion.div>
 
-      <div className='relative flex flex-col items-center min-h-screen'>
+      <div className='relative flex flex-col items-center min-h-screen container'>
         <div className='mt-7 mb-7'>
           <Navbar />
         </div>
@@ -147,14 +148,19 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative w-full h-screen overflow-y-clip z-0">
-          <div className="">
+        <div className="bg-popover relative overflow-y-clip w-full z-0">
+          <div className="w-full px-4 md:px-8 lg:px-15">
             <Faq />
           </div>
         </div>
-        <div className="bg-popover relative w-full z-0">
+        <div id='contact' className="bg-popover relative w-full z-0">
           <div className="flex flex-col justify-center px-4 md:px-8 lg:px-15">
             <Contact />
+          </div>
+        </div>
+        <div className="bg-popover relative w-full z-0">
+          <div className="flex flex-col justify-center px-4 md:px-8 lg:px-15 ">
+            <Footer />
           </div>
         </div>
       </div>
