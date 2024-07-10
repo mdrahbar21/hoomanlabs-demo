@@ -18,11 +18,11 @@ const GradientOutlineText: React.FC<{ text: string; className?: string }> = ({ t
 
 const AutomationStats: React.FC = () => {
   return (
-    <div className="text-white p-4 sm:p-6 md:p-12 font-Gilroy h-screen">
+    <div className="text-white p-4 sm:p-6 md:p-12 font-Gilroy md:h-screen">
       <div className="relative mb-8 sm:mb-16">
         <GradientOutlineText text="70%" className="z-0" />
         <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/3 text-center w-full">
-          <h2 className="text-text-tertiary font-semibold mb-1 sm:mb-2 text-xl sm:text-2xl md:text-5xl">Automated upto 70% of your daily</h2>
+          <h2 className="text-text-tertiary font-semibold mb-1 sm:mb-2 text-xl sm:text-xl md:text-5xl">Automated upto 70% of your daily</h2>
           <h2 className="text-text-tertiary text-xl sm:text-2xl md:text-5xl">customer calls</h2>
         </div>
       </div>
@@ -30,13 +30,13 @@ const AutomationStats: React.FC = () => {
         <div className="text-center w-full sm:w-1/2">
           <div className="relative">
             <GradientOutlineText text="60%" className="h-16 sm:h-20 md:h-24 lg:h-40 z-0 " />
-            <h3 className="text-text-tertiary font-semibold text-lg sm:text-xl md:text-3xl -mt-14">Cost Saving</h3>
+            <h3 className="text-text-tertiary font-semibold text-lg sm:text-xl md:text-3xl -mt-6 md:-mt-14">Cost Saving</h3>
           </div>
         </div>
         <div className="text-center w-full sm:w-1/2">
           <div className="relative">
             <GradientOutlineText text="100%" className="h-16 sm:h-20 md:h-24 lg:h-40 z-0" />
-            <h3 className="font-semibold tracking-wider  text-lg sm:text-xl md:text-3xl -mt-14">Available</h3>
+            <h3 className="font-semibold tracking-wider  text-lg sm:text-xl md:text-3xl -mt-6 md:-mt-14">Available</h3>
           </div>
         </div>
       </div>

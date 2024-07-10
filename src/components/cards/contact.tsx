@@ -41,7 +41,7 @@ export default function Contact() {
                     className="col-span-1 flex flex-col min-w-[320px] sm:min-w-[400px] px-8 sm:px-12"
                 >
                     <div className="col-span-1 flex flex-col min-w-[320px] sm:min-w-[400px] px-8 sm:px-12">
-                        <h2 className="md:text-start text-center font-semibold text-[48px] sm:text-[72px] tracking-tight">
+                        <h2 className="md:text-start text-center font-semibold text-[48px] md:text-[72px] tracking-tight">
                             Get In Touch
                         </h2>
                         <h3 className='text-xl text-start px-2 mt-6'>

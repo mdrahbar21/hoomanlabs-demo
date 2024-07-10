@@ -59,11 +59,11 @@
 
 
 h1 {
-  @apply font-Gilroy text-6xl md:text-7xl font-semibold text-center tracking-tighter pointer-events-none  bg-gradient-to-b from-text-primary to-text-secondary bg-clip-text text-transparent;
+  @apply font-Gilroy text-4xl md:text-7xl font-semibold text-center tracking-tighter pointer-events-none  bg-gradient-to-b from-text-primary to-text-secondary bg-clip-text text-transparent;
 }
 
 h2 {
-  @apply font-Gilroy text-4xl md:text-5xl 2xl:text-6xl font-medium tracking-tight md:tracking-tighter pointer-events-none bg-gradient-to-b from-text-primary to-text-secondary bg-clip-text text-transparent;
+  @apply font-Gilroy text-3xl md:text-5xl 2xl:text-6xl font-medium tracking-tight md:tracking-tighter pointer-events-none bg-gradient-to-b from-text-primary to-text-secondary bg-clip-text text-transparent;
 }
 
 h3 {

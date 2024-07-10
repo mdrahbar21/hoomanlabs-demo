@@ -49,7 +49,7 @@ const ChatInterface: React.FC = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full h-screen max-w-[1440px] gap-10 mx-auto py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full max-w-[1440px] gap-10 mx-auto py-10">
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{
@@ -64,9 +64,9 @@ const ChatInterface: React.FC = () => {
               Other Features
             </h3>
           </div>
-          <h1 className="text-start sm:mx-4 font-Gilroy font-semibold text-[48px] sm:text-[72px] tracking-tight">
-            Your shopify store now has a voice
-          </h1>
+          <h3 className="text-start sm:mx-4 font-Gilroy font-semibold tracking-tight">
+          <span className="text-primary">Voice assistant</span> simplifies <br/> shopping, answers queries,<br/> and boosts conversations
+          </h3>
           <div className="flex flex-col sm:mx-4 mt-6">
             <div className="flex items-center h-[24px] my-2">
               <img src="/list-star.svg" className="w-[24px] h-[24px]" />
@@ -136,7 +136,7 @@ const ChatInterface: React.FC = () => {
                   transition={{ duration: 0.5 }}
                   className={`flex ${
                     message.sender === "user" ? "justify-start" : "justify-end"
-                  } items-end space-x-2`}
+                  } items-end space-x-2 `}
                 >
                   {message.sender === "user" && (
                     <div className="w-8 h-8 rounded-full flex items-center justify-center">
@@ -150,7 +150,7 @@ const ChatInterface: React.FC = () => {
                         : "bg-gradient-to-r from-[#323232] to-[#141414] rounded-lg rounded-br-none"
                     }`}
                   >
-                    <h4 className="font-Gilroy font-light text-xs sm:text-sm text-foreground text-start">
+                    <h4 className="font-Gilroy font-light text-xs sm:text-xs text-foreground text-start">
                       {message.text}
                     </h4>
                   </div>

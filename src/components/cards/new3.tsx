@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ExpandingCard from "./card3";
 import { motion } from "framer-motion";
 
@@ -33,6 +33,17 @@ const agents = [
 const CardGrid: React.FC = () => {
   const [clickedCard, setClickedCard] = useState<number | null>(null);
   const [callStatus, setCallStatus] = useState<string>("startCall");
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // 768px is the default breakpoint for md in Tailwind
+    };
+    handleResize(); // Call once to set initial state
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleCardClick = (index: number) => {
     setClickedCard(index === clickedCard ? null : index);
@@ -41,7 +52,6 @@ const CardGrid: React.FC = () => {
 
   const handleStartCall = () => {
     setCallStatus("connecting...");
-    // Add logic for starting the call if necessary
   };
 
   const handleEndCall = () => {
@@ -50,15 +60,66 @@ const CardGrid: React.FC = () => {
   };
 
   return (
-    // <div className="flex flex-col items-center z-10 flex-1 bg-popover p-8 rounded-3xl shadow-lg border-2 border-double">
-    //   <div className="flex flex-col justify-center pt-20 pl-28 pb-10 pr-28 border rounded-3xl">
-        <div>
-          {/* <div className="relative flex gap-4"> */}
-            <div
+      <>
+        {/* For md and above screens */}
+      <div className="hidden md:flex gap-3 w-full h-[260px] justify-between items-center relative">
+        {agents.map((agent, index) => (
+          <motion.div
+            key={index}
+            animate={{
+              width: clickedCard === index ? 300 : 140,
+              opacity: clickedCard !== null && clickedCard !== index ? 0.5 : 1,
+              scale: clickedCard !== null && clickedCard !== index ? 0.8 : 1,
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <ExpandingCard
+              isClicked={clickedCard === index}
+              onClick={() => handleCardClick(index)}
+              onStartCall={handleStartCall}
+              onEndCall={handleEndCall}
+              isDisabled={clickedCard !== null && clickedCard !== index}
+              imgSrc={agent.imageSrc}
+              name={agent.name}
+              role={agent.role}
+              status={callStatus}
+              isSmallScreen={isSmallScreen}
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* For sm and smaller screens */}
+      <div className="md:hidden grid grid-cols-2 gap-3 w-full">
+        {agents.map((agent, index) => (
+          <motion.div
+            key={index}
+            animate={{
+              opacity: clickedCard !== null && clickedCard !== index ? 0.5 : 1,
+              scale: clickedCard !== null && clickedCard !== index ? 0.8 : 1,
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <ExpandingCard
+              isClicked={clickedCard === index}
+              onClick={() => handleCardClick(index)}
+              onStartCall={handleStartCall}
+              onEndCall={handleEndCall}
+              isDisabled={clickedCard !== null && clickedCard !== index}
+              imgSrc={agent.imageSrc}
+              name={agent.name}
+              role={agent.role}
+              status={callStatus}
+              isSmallScreen={isSmallScreen}
+            />
+          </motion.div>
+        ))}
+      </div>
+            {/* <div
               className="gap-3"
               style={{
                 width: "full",
-                height: 260, // Adjust to accommodate card height and spacing
+                height: 260, 
                 display: "flex ",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -76,7 +137,6 @@ const CardGrid: React.FC = () => {
                       clickedCard !== null && clickedCard !== index ? 0.8 : 1,
                   }}
                   transition={{ duration: 0.2 }}
-                //   style={{ display: "inline-block" }}
                 >
                   <ExpandingCard
                     isClicked={clickedCard === index}
@@ -91,12 +151,8 @@ const CardGrid: React.FC = () => {
                   />
                 </motion.div>
               ))}
-            </div>
-           </div>
-        // </div>
-    //   </div>
-    // </div>
-    // </div>
+            </div> */}
+      </>
   );
 };
 

@@ -11,9 +11,14 @@ const Integrations: React.FC = () => {
                 </h3>
             </div>
             <h2 className="md:text-start text-center py-8"> Connect your entire E-commerce tech stack</h2>
-            <div className=" ">
+            <div className="hidden md:flex">
                 <a href="#ContactUs">
                 <img src="/integration.svg" alt="integrations" className="" />
+                </a>
+            </div>
+            <div className="md:hidden">
+                <a href="#ContactUs">
+                <img src="/integrations-sm.svg" alt="integrations" className="" />
                 </a>
             </div>
         </div>

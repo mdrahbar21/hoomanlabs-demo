@@ -70,7 +70,7 @@ const Carousel: React.FC = () => {
 };
 
 return (
-    <div className='h-screen'>  
+    <div className='h-full md:h-screen'>  
       <div className='bg-popover relative flex flex-col items-center -mt-10'>
           <div className="sm:mx-4 border border-[#F80759] mt-20 flex items-center justify-center rounded-full py-1 px-2 sm:px-3 mb-6 w-fit  bg-[#AA093F]/10">
               <h3 className="text-center mx-4 z-10 font-Gilroy font-medium text-[12px] sm:text-[16px] text-[#F80759] w-wrap">
@@ -115,7 +115,7 @@ return (
             </motion.div>
           </AnimatePresence>
             
-          <button 
+          {/* <button 
             onClick={prevSlide}
             className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-full sm:-translate-x-full  text-text-primary rounded-full p-2 focus:outline-none "
             aria-label="Previous testimonial"
@@ -134,7 +134,29 @@ return (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </button>
+          </button> */}
+          <div className="absolute inset-0 flex items-center justify-between pointer-events-none">
+            <button 
+              onClick={prevSlide}
+              className="pointer-events-auto text-text-primary rounded-full p-2 md:-mx-20 focus:outline-none hover:bg-gray-200 transition-colors"
+              aria-label="Previous testimonial"
+              disabled={currentIndex === 0}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="pointer-events-auto text-text-primary rounded-full p-2 md:-mx-20 focus:outline-none hover:bg-gray-200 transition-colors"
+              aria-label="Next testimonial"
+              disabled={currentIndex === testimonials.length - 1}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

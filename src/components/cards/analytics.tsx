@@ -33,8 +33,8 @@ const Analytics: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full h-screen max-w-[1440px] gap-10 mx-auto py-10">
+    <div className="h-full md:mb-40">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full  max-w-[1440px] gap-10 mx-auto py-10">
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{
