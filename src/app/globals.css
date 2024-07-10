@@ -78,17 +78,16 @@ p {
   @apply font-Gilroy text-text-tertiary text-lg pointer-events-none;
 }
 
-
 .scroll-snap-container {
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 90vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scroll-padding-top: 50px;  
-  scroll-padding-bottom: 50px;
+  scroll-padding-top: 0;
+  scroll-padding-bottom: 0;
 }
 
+.scroll-snap-align-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
 .logo-container {
   display: flex;
@@ -214,3 +213,4 @@ p {
   background-clip: text;
   color: transparent;
 }
+

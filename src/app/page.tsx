@@ -12,11 +12,10 @@ import Carousel from '@/components/carousel/carousel';
 import LogoSlider from '@/components/carousel/logoSlider';
 import Integrations from '@/components/integrations/integration';
 import Contact from '@/components/cards/contact';
-import Scroller from '@/components/eCommerceSupport/scroller';
-import Scroller2 from '@/components/eCommerceSupport/scroll2';
 import AutomationStats from '@/components/eCommerceSupport/automationStats';
 import Analytics from '@/components/cards/analytics';
 import Scroll from '@/components/eCommerceSupport/scroll';
+import ScrollSm from '@/components/eCommerceSupport/scrollSm';
 import StarsCanvas from '@/components/star';
 import Footer from '@/components/footer/footer';
 
@@ -81,10 +80,32 @@ const HomePage: React.FC = () => {
             <LogoSlider />
           </div>
         </div>
+        <div className='hidden md:flex'>
+          <div className="bg-popover relative w-full z-0 px-4 md:px-8 lg:px-15">
+            <div className="w-full flex flex-col justify-center max-w-[1440px] mx-auto">
+              <div className='relative flex flex-col items-start'>
+                <div className=" border border-[#F80759] mt-20 flex items-center justify-center rounded-full py-1 px-2 sm:px-3 mb-6 w-fit bg-[#AA093F]/10">
+                  <h3 className="text-center  z-10 font-Gilroy font-medium text-[12px] sm:text-[16px] text-[#F80759] w-wrap">
+                    What we provide
+                  </h3>
+                </div>
+              </div>
+              <div className="hidden md:grid md:grid-cols-3 w-full max-w-[1440px]  mx-auto py-10">
+                <h2 className="md:text-start md:col-span-3 px-auto">
+                  Revolutionary AI Voice Agents <br/> for 
+                  effortless E-Commerce support
+                </h2>
+              </div>
+              <Scroll />
+            </div>
+          </div>
+        </div>
+        <div className='md:hidden'>
         <div className="bg-popover relative w-full z-0 px-4 md:px-8 lg:px-15">
           <div className="w-full flex flex-col justify-center max-w-[1440px] mx-auto">
-            <Scroll />
+            <ScrollSm />
           </div>
+        </div>
         </div>
         <div className="bg-popover relative overflow-y-clip w-full z-0">
           <div className="w-full px-4 md:px-8 lg:px-15">
