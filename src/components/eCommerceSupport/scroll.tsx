@@ -125,7 +125,7 @@ const Scroll: React.FC = () => {
       <div ref={topRef} className="absolute top-0 h-1 w-full"></div>
       <div 
         ref={scrollContainerRef}
-        className={`h-full overflow-y-scroll no-scrollbar scroll-snap-type-y mandatory scroll-snap-container ${isInternalScrollActive ? 'overflow-hidden' : 'overflow-y-auto'}`}
+        className={`h-full overflow-y-scroll no-scrollbar scroll-snap-type-y mandatory scroll-snap-container ${isInternalScrollActive ? 'overflow-y-auto' : 'overflow-hidden'}`}
       >
         <div className='grid grid-cols-1 md:grid-cols-7 h-[300vh]'>
           <div className='relative col-span-3'>
