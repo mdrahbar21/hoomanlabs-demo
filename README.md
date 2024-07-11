@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![View demo](https://github.com/mdrahbar21/hoomanlabs-demo/main/site.mp4)
+![View demo]([https://github.com/mdrahbar21/hoomanlabs-demo/main/site.mp4](https://github.com/mdrahbar21/hoomanlabs-demo/blob/main/site.mp4))
 ![alt text](background-three.js.gif)
 
 ## Getting Started
