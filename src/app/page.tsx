@@ -19,6 +19,9 @@ import ScrollSm from '@/components/eCommerceSupport/scrollSm';
 import StarsCanvas from '@/components/star';
 import Footer from '@/components/footer/footer';
 
+const Wave = dynamic(()=> import('@/components/wave'))
+// use Wave component in place of StarsCanvas
+
 const VideoComponent = dynamic(() => import('@/components/cards/videoComponent'), {
   suspense: true,
 });

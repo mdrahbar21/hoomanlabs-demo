@@ -27,15 +27,17 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-2">About us</h3>
+            {/* <h3 className="text-lg font-semibold mb-2">About us</h3> */}
             <ul className='justify-center items-center text-center'>
+              <li><Link href="/aboutUs" className="hover:underline">About us</Link></li>
               <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
               <li><Link href="/dashboard" className="hover:underline">Dashboard</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-2">Privacy and policy</h3>
+            {/* <h3 className="text-lg font-semibold mb-2">Privacy and policy</h3> */}
             <ul className='justify-center items-center text-center'>
+              <li><Link href="/privacyPolicy" className="hover:underline">Privacy and policy</Link></li>
               <li><Link href="/terms" className="hover:underline">Terms of use</Link></li>
             </ul>
           </div>
